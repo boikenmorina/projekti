@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Boot</title>
+    <meta name="description" content="Our first page" />
+    {% load static %}
+    <link rel="StyleSheet" href="{% static 'css/one.css' %}" type="text/css" media="screen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+   
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/home.js' %}"></script>
+  </head>
+  <body>
+    <header>
+      <div class="studio-name">Law Studio</div>
+      <div class="contact">
+        <span>Contact Us</span>
+        <p>+1 234 567 8900</p>
+      </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'home' %}">
+          <img src="{% static 'photos/logo.jpg' %}" alt="Logo" width="100" height="80" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#"></a>
+            </li>
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdownMenuLink"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Services
+                </a>
+                <div
+                  class="dropdown-menu"
+                  aria-labelledby="navbarDropdownMenuLink"
+                >
+                  <a class="dropdown-item" href="{% url 'contract' %}">Contract Law</a>
+                  <a class="dropdown-item" href="#">Family Law</a>
+                  <a class="dropdown-item" href="#">Employment law</a>
+                  <a class="dropdown-item" href="#">Other</a>
+                </div>
+              </li>
+            </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'about' %}">About Us</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'newsletter' %}">Newsletter</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'pricelist' %}">Pricelist</a>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+    <div class="container-fluid">
+        <img src="{% static 'photos/homeim.jpg' %}" class="img-fluid" alt="Picture"  />
+    </div>
+
+
+<div>
+    <h1 class="text-center mt-5">Services</h1>
+    
+</div>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-lg-4 col-md-6 col-sm-12 image-container" onclick="redirectToPage('contract.html')">
+            <img src="{% static 'photos/contract.jpg' %}" class="img-fluid rounded border mb-3" alt="Picture 2" />
+            <div class="overlay">
+                <div class="text">Contract Law</div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 col-sm-12 image-container" onclick="redirectToPage()">
+            <img src="{% static 'photos/divorce.jpg' %}" class="img-fluid rounded border mb-3" alt="Picture 2" />
+            <div class="overlay">
+                <div class="text">Divorce</div>
+            </div>
+        </div>
+        
+         <div class="col-lg-4 col-md-6 col-sm-12 image-container" onclick="redirectToPage('home.html')">
+            <img src="{% static 'photos/employment_law.jpg' %}" class="img-fluid rounded border mb-3" alt="Picture 2" />
+            <div class="overlay">
+                <div class="text">Employment Law</div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 image-container" onclick="redirectToPage()">
+            <img src="{% static 'photos/family_law.jpg' %}" class="img-fluid rounded border mb-3" alt="Picture 2" />
+            <div class="overlay">
+                <div class="text">Family Law</div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 image-container" onclick="redirectToPage()">
+            <img src="{% static 'photos/immigration_law.jpg' %}" class="img-fluid rounded border mb-3" alt="Picture 2" />
+            <div class="overlay">
+                <div class="text">Immigration Law</div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 image-container" onclick="redirectToPage()">
+            <img src="{% static 'photos/other.jpg' %}" class="img-fluid rounded border mb-3" alt="Picture 2" />
+            <div class="overlay">
+                <div class="text">Other</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="fact-container">
+    <button id="fact-btn" onclick="displayFact()"> Did you know?</button>
+    <p id="fact-text">Click the button to see a law fact!</p>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <p>© 2024 Morina Law Studio. All rights reserved.</p>
+        <p>Contact Us: info@morinalawstudio.com</p>
+    </div>
+</footer>
+
+
+</body>
+ 
+</html>

@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: grey;
+}
+
+header {
+    background-color: black; 
+    color: white; 
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.studio-name {
+    color: rgba(244, 144, 5, 0.692); 
+    font-size: 3em;
+    font-weight: bold; 
+    flex: 1; 
+    text-align: center; 
+}
+
+
+
+.contact {
+    text-align: right;
+    color:white
+}
+
+.contact span {
+    display: block;
+    font-size: 0.8em;
+    color: white;
+}
+
+.contact p {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
