@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-rmz-l5@98ryz=t(zi#^=9$z&7ljqom_ca(ygu=99#5u&1m9%r!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['lawstudio-05fd6a4a912a.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
